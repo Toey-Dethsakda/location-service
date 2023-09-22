@@ -8,7 +8,7 @@ const Location = require('./models/location')
 app.use(express.json())
 
 app.use(cors({
-    origin: '*', // Allow all origins (you can restrict it to specific domains if needed)
+    origin: 'https://locat-storie.vercel.app/', // Allow all origins (you can restrict it to specific domains if needed)
     methods: 'GET, POST, PUT, DELETE, OPTIONS', // Allow the specified HTTP methods
     allowedHeaders: 'Content-Type', // Allow the specified headers
   }));
