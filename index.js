@@ -7,12 +7,6 @@ const Location = require('./models/location')
 
 app.use(express.json())
 
-app.use(cors({
-    origin: ['https://locat-storie.vercel.app', 'https://another-allowed-origin.com', 'https://yet-another-allowed-origin.com'],
-    methods: 'GET, POST, PUT, DELETE, OPTIONS',
-    allowedHeaders: 'Content-Type',
-}));
-
 const connectDB = require('./connectMongo')
 
 connectDB()
