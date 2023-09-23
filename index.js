@@ -13,6 +13,11 @@ const connectDB = require('./connectMongo')
 
 connectDB()
 
+var corsOptions = {
+    origin: ['http://localhost:3000', 'https://locat-storie.vercel.app'],
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
+
 const PORT = process.env.PORT
 
 app.get('/', (req, res) => {
@@ -27,11 +32,6 @@ app.get('/api/locations', cors(corsOptions), (req, res, next) => {
         .catch((err) => {
             next(err);
         });
-});
-
-app.post('/api/locations', cors(corsOptions), async (req, res, next) => {
-
-    
 });
 
 app.post('/api/locations', cors(corsOptions), function (req, res, next) {
