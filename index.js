@@ -16,7 +16,7 @@ connectDB()
 const PORT = process.env.PORT
 
 var corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'https://locat-storie.vercel.app'],
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
