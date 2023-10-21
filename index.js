@@ -36,12 +36,13 @@ app.get('/api/locations', cors(corsOptions), (req, res, next) => {
 
 app.post('/api/locations', cors(corsOptions), function (req, res, next) {
     try {
-        const { latitude, longitude } = req.body;
+        const { latitude, longitude, userAgent } = req.body;
 
         // Create a new location document
         const location = new Location({
             latitude,
             longitude,
+            userAgent,
         });
 
         // Save the location to the database
